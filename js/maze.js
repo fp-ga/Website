@@ -2,7 +2,7 @@
 //and 2 and 3 are start and end respectively
 //invariant: n>3
 function generateMaze(n){
-
+	if (n <= 3) throw new Error("size is too small silly");
 	const maze=[];
 	const mazeMirror=[];
 	for(let i=0;i<n;i++){
