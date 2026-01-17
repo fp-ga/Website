@@ -1,11 +1,11 @@
-const container=documen.getElementById("maze-container");
+const container=document.getElementById("maze-container");
 const button=document.getElementById("generate-maze");
 
 const SIZE=20;
 
 function renderMaze(maze){
 	container.innerHTML="";
-	
+
 	container.style.display="grid";
 	container.style.gridTemplateColumns=`repeat(${maze.length}, 20px)`;
 	container.style.gap="2px";
@@ -14,7 +14,7 @@ function renderMaze(maze){
 			const cell = document.createElement("div");
 			cell.style.width = "20px";
 			cell.style.height = "20px";
-			
+
 			switch(maze[i][j]){
 				case 0:
 					cell.style.backgroundColor = "#e0e1dd"; // walkable
