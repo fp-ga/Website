@@ -7,7 +7,7 @@ function renderMaze(maze){
 	container.innerHTML="";
 
 	container.style.display="grid";
-	container.style.gridTemplateColumns=`repeat(${maze.length}, 20px)`;
+	container.style.gridTemplateColumns=`repeat(${maze.length}, 50px)`;
 	container.style.gap="2px";
 	for(let i=0;i<maze.length;i++){
 		for(let j=0;j<maze[i].length;j++){
