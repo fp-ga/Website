@@ -36,7 +36,7 @@ function renderMaze(maze){
 
 
 function generateAndRender() {
-	const maze = generateMaze(MAZE_SIZE);
+	const maze = generateMaze(SIZE);
 	renderMaze(maze);
 }
 
