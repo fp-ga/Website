@@ -25,6 +25,8 @@ function generateMaze(n){
 					maze[i+1][j+1];
 				if(neighbourhood<2||neighbourhood>6){
 					mazeMirror[i][j]=1;
+				}else{
+					mazeMirror[i][j]=0;
 				}
 			}
                 }
