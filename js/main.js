@@ -3,6 +3,13 @@ const button=document.getElementById("generate-maze");
 
 const SIZE=10;
 
+const MEME_COUNT=59;
+const meme=document.getElementById("meme");
+if(meme){
+	const randomMeme=Math.floor(Math.random()*MEME_COUNT);
+	meme.src=`memes/${randomMeme}.png`;
+}
+
 function renderMaze(maze){
 	container.innerHTML="";
 
