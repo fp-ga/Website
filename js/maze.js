@@ -31,6 +31,25 @@ function generateMaze(n){
 			}
                 }
         }
+	for(let i=0;i<n;i++){
+                mazeMirror[i]=[];
+                for(let j=0;j<n;j++){
+                        if(i===0||j===0||i===n-1||j===n-1){
+                                mazeMirror[i][j]=1;
+                        }else{
+                                const neighbourhood = maze[i-1][j-1]+
+                                        maze[i-1][j]+maze[i-1][j+1]+
+                                        maze[i][j-1]+maze[i][j+1]+
+                                        maze[i+1][j-1]+maze[i+1][j]+
+                                        maze[i+1][j+1];
+                                if(neighbourhood<2||neighbourhood>6){
+                                        mazeMirror[i][j]=1;
+                                }else{
+                                        mazeMirror[i][j]=0;
+                                }
+                        }
+                }
+        }
 	mazeMirror[1][1]=2;
 	mazeMirror[n-2][n-2]=3;
 	return mazeMirror;
