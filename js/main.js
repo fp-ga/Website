@@ -1,7 +1,7 @@
 const container=document.getElementById("maze-container");
 const button=document.getElementById("generate-maze");
 
-const SIZE=20;
+const SIZE=10;
 
 function renderMaze(maze){
 	container.innerHTML="";
