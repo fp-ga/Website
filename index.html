@@ -1,77 +1,140 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Hello ^^</title>
-  <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fp-ga.xyz — Example Layout</title>
-  <!-- IBM Plex Sans (titles) -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Iosevka (body text) - using CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/iosevka@17.0.3/dist/iosevka/iosevka.min.css" rel="stylesheet">
-  <style>
-   body {
-           background-color: #0d1f14;
-           color: #b4f5c1;
-           margin: 0;
-           padding: 0;
-           font-family: 'Iosevka', monospace;
-           line-height: 1.6;
-      }
-    h1 {
-      font-size: 2.5rem;
-      color: #a9d6e5;
-    }
-    h2 {
-      font-size: 1.2rem;
-      color: #e0e0e0; 
-    }
-  button {
-      font-size: 3.1rem;
-      color: #fca311;
-      background-color: transparent;
-      border: 2px solid #fca311;
-      border-radius: 8px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fp-ga.xyz</title>
 
-  button:hover {
-    color: #0d1b2a;
-    background-color: #fca311;
-    transform: scale(1.05);
-  }
-    #cool-links {
-      list-style: none; 
-      padding: 0;
-      margin: 20px 0;
-      justify-content: center; 
-      
-  }
-  
-  #cool-links a {
-    text-decoration: none; 
-    font-size: 1.2rem;
-    transition: color 0.3s; 
-  }
+    <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
 
-  #cool-links a:hover {
-    color: #e0e0e0; 
-  }
-  </style>
+    <!-- IBM Plex Sans (headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Iosevka (body text) -->
+    <link href="https://cdn.jsdelivr.net/npm/iosevka@17.0.3/dist/iosevka/iosevka.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0d1f14;
+            color: #b4f5c1;
+            margin: 0;
+            padding: 0;
+            font-family: 'Iosevka', monospace;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            margin: 0 0 1rem;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 720px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        a {
+            color: #b4f5c1;
+            text-decoration: none;
+            border-bottom: 1px dotted #b4f5c1;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Links list */
+        #cool-links {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        #cool-links li {
+            margin: 0.5rem 0;
+        }
+
+        /* Button */
+        button {
+            font-size: 2.5rem;
+            color: #fca311;
+            background-color: transparent;
+            border: 2px solid #fca311;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            color: #0d1f14;
+            background-color: #fca311;
+            transform: scale(1.05);
+        }
+
+        #maze-container {
+            margin-top: 2rem;
+        }
+
+        #meme {
+            margin-top: 1.5rem;
+            max-width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>hello welcome sorry for the mess</h1>
-  <h1>I'm trying to clean up but I can't really code lmao</h1>
-  <h2>Cool Links</h2>
-  <ul id="cool-links"> <li>
-  <a href="https://lichess.org" target="_blank">Lichess.org</a></li>
-  <li><a href="https://github.com" target="_blank">GitHub.org</a></li> </ul>
-  <img id="meme" src="">
-  <button id="generate-maze">PRESS ME</button>
-  <div id="maze-container"></div>
-  <script src="js/maze.js"></script>
-  <script src="js/main.js"></script>
+    <header>
+        <h1>hello welcome sorry for the mess</h1>
+        <p>I'm trying to clean up but I can't really code lmao</p>
+    </header>
+
+    <div class="container">
+
+        <section class="section">
+            <h2>Cool Links</h2>
+            <ul id="cool-links">
+                <li><a href="https://lichess.org" target="_blank">Lichess.org</a></li>
+                <li><a href="https://github.com" target="_blank">GitHub.org</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Maze Thing</h2>
+            <button id="generate-maze">PRESS ME</button>
+            <img id="meme" src="" alt="">
+            <div id="maze-container"></div>
+        </section>
+
+    </div>
+
+    <script src="js/maze.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
