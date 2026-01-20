@@ -1,0 +1,31 @@
+//generates a maze Matrix. 1 signifies a wall 0 is air/walkable 
+//and 2 and 3 are start and end respectively
+//invariant: n>3
+function generateMaze(n){
+	if (n <= 3) throw new Error("size is too small silly");
+	const maze=[];
+	const mazeMirror=[];
+	for(let i=0;i<n;i++){
+		maze[i]=[];
+		for(let j=0;j<n;j++){
+			maze[i][j]=0;
+		}
+	}
+
+	for (let i = 0; i < n; i++) {
+        	maze[0][i] = 1;
+        	maze[n - 1][i] = 1;
+	        maze[i][0] = 1;
+	        maze[i][n - 1] = 1;
+	}
+	for
+
+
+
+
+
+	mazeMirror[1][1]=2;
+	mazeMirror[n-2][n-2]=3;
+	return mazeMirror;
+}
+window.generateMaze=generateMaze;

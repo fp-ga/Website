@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fp-ga.xyz — Example Layout</title>
+
+    <!-- IBM Plex Sans (titles) -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Iosevka (body text) - using CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/iosevka@17.0.3/dist/iosevka/iosevka.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0d1f14;
+            color: #b4f5c1;
+            margin: 0;
+            padding: 0;
+            font-family: 'Iosevka', monospace;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            margin: 0 0 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 750px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .section {
+            padding: 2rem 1.5rem;
+        }
+
+        a {
+            color: #b4f5c1;
+            border-bottom: 1px dotted #b4f5c1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>fp-ga.xyz</h1>
+        <p>A personal workshop, playground, and corner of the internet.</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Welcome</h2>
+            <p>
+                This is an example layout demonstrating the color palette and typography:
+                IBM Plex Sans for headings and Iosevka for body text. Adjust spacing,
+                add components, and expand sections as your site grows.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Sample Link</h2>
+            <p>
+                This is how <a href="#">a link</a> appears with the current theme.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
