@@ -10,13 +10,17 @@ if(meme){
 	meme.src=`memes/${randomMeme}.png`;
 }
 
+
 function renderMaze(maze) {
     container.innerHTML = "";
 
-    const CELL_SIZE = Math.min(40,Math.floor(container.clientWidth/maze.length));
+    const CELL_SIZE = Math.min(
+        40,
+        Math.floor(container.clientWidth / maze.length)
+    );
 
     container.style.display = "grid";
-    container.style.gridTemplateColumns = repeat(${maze.length}, ${CELL_SIZE}px);
+    container.style.gridTemplateColumns = `repeat(${maze.length}, ${CELL_SIZE}px)`;
     container.style.gap = "2px";
     container.style.justifyContent = "center";
 
@@ -24,8 +28,8 @@ function renderMaze(maze) {
         for (let j = 0; j < maze[i].length; j++) {
             const cell = document.createElement("div");
 
-            cell.style.width = ${CELL_SIZE}px;
-            cell.style.height = ${CELL_SIZE}px;
+            cell.style.width = `${CELL_SIZE}px`;
+            cell.style.height = `${CELL_SIZE}px`;
 
             switch (maze[i][j]) {
                 case 0:
@@ -46,6 +50,8 @@ function renderMaze(maze) {
         }
     }
 }
+
+
 
 function generateAndRender() {
 	const maze = generateMaze(SIZE);
