@@ -36,7 +36,7 @@ function renderMaze(maze) {
                     cell.style.backgroundColor = "#e0e1dd";
                     break;
                 case 1:
-                    cell.style.backgroundColor = "#0d1b2a";
+                    cell.style.backgroundColor = "#0d1f14";
                     break;
                 case 2:
                     cell.style.backgroundColor = "#4caf50";
