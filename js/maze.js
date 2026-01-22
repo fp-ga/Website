@@ -39,7 +39,7 @@ function generateMaze(n) {
         let c=0;
         for(const i of maze)
             for(const j of i)
-                c+=i;
+                c+=j;
         return c;
     }
     function isConnected(maze) {
