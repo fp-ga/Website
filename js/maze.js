@@ -11,7 +11,6 @@ function generateMaze(n) {
         }
 
         const mazeMirror = [];
-        for (let repeat = 0; repeat < 2; repeat++) {
             for (let i = 0; i < n; i++) {
                 mazeMirror[i] = [];
                 for (let j = 0; j < n; j++) {
@@ -28,7 +27,7 @@ function generateMaze(n) {
             for (let i = 0; i < n; i++) {
                 maze[i] = [...mazeMirror[i]];
             }
-        }
+        
 
         mazeMirror[1][1] = 2;
         mazeMirror[n-2][n-2] = 3;
