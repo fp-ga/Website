@@ -28,14 +28,20 @@ function generateMaze(n) {
                 maze[i] = [...mazeMirror[i]];
             }
         
-        mazeMirror[1][n/2]=1;
-        mazeMirror[n/2][1]=1;
+        mazeMirror[1][Math.floor(n/2)]=1;
+        mazeMirror[Math.floor(n/2)][1]=1;
         mazeMirror[1][1] = 2;
         mazeMirror[n-2][n-2] = 3;
 
         return mazeMirror;
     }
-
+    function sum(maze){
+        let c=0;
+        for(const i of maze)
+            for(const j of i)
+                c+=i;
+        return c;
+    }
     function isConnected(maze) {
         const visited = Array.from({length: n}, () => Array(n).fill(false));
         const dirs = [[1,0],[0,1],[-1,0],[0,-1]];
@@ -68,7 +74,7 @@ function generateMaze(n) {
     let maze;
     do {
         maze = createMaze();
-    } while (!isConnected(maze));
+    } while (!isConnected(maze)||sum(maze)<(n*n)/3);
 
     return maze;
 }
