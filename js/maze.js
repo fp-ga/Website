@@ -28,7 +28,8 @@ function generateMaze(n) {
                 maze[i] = [...mazeMirror[i]];
             }
         
-
+        mazeMirror[1][n/2]=1;
+        mazeMirror[n/2][1]=1;
         mazeMirror[1][1] = 2;
         mazeMirror[n-2][n-2] = 3;
 
