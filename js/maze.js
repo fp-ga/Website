@@ -74,7 +74,7 @@ function generateMaze(n) {
     let maze;
     do {
         maze = createMaze();
-    } while (!isConnected(maze)||sum(maze)<(n*n)/4);
+    } while (!isConnected(maze)||sum(maze)<(n*n)/3);
 
     return maze;
 }
