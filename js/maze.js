@@ -20,7 +20,7 @@ function generateMaze(n) {
                         const neighbourhood = maze[i-1][j-1]+maze[i-1][j]+maze[i-1][j+1]+
                                               maze[i][j-1]+maze[i][j+1]+
                                               maze[i+1][j-1]+maze[i+1][j]+maze[i+1][j+1];
-                        mazeMirror[i][j] = (neighbourhood < 2 || neighbourhood > 6) ? 1 : 0;
+                        mazeMirror[i][j] = (neighbourhood < 3 || neighbourhood > 5) ? 1 : 0;
                     }
                 }
             }
