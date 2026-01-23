@@ -6,7 +6,7 @@ function generateMaze(n) {
         for (let i = 0; i < n; i++) {
             maze[i] = [];
             for (let j = 0; j < n; j++) {
-                maze[i][j] = (Math.random() > 0.7) ? 1 : 0;
+                maze[i][j] = (Math.random() > 0.5) ? 1 : 0;
             }
         }
 
@@ -74,7 +74,7 @@ function generateMaze(n) {
     let maze;
     do {
         maze = createMaze();
-    } while (!isConnected(maze)||sum(maze)<(n*n)/3);
+    } while (!isConnected(maze)||sum(maze)<(n*n)/2);
 
     return maze;
 }
